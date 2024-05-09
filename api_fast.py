@@ -31,6 +31,7 @@ async def ingest_data(data:dict):
         cursor.execute('''INSERT INTO Ventas (TV, radio, newspaper, sales)
                        VALUES (?,?,?,?)''', (x[0],x[1],x[2],x[3]))
         conn.commit()
+        #conn.close() 
     return {'message': 'Datos ingresados correctamente'}
     
 
